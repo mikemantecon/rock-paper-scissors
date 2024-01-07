@@ -85,9 +85,9 @@ function game () {
 
 let userInput = prompt("Did you enjoy this game? ").toLowerCase;
 
-if (userinput === yes) {
+if (userInput === yes) {
   console.log("We're glad you enjoyed. Play again soon!");
-} else if (userinput === no) {
+} else if (userInput === no) {
  console.log("Please message me on my GitHub and let me know how I can improve the game.");
 } else {
   console.log("Come back soon!");
