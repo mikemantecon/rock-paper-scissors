@@ -35,9 +35,21 @@ function rockPaperScissors (playerSelection, computerSelection) {
         console.log("Debugging Needed 35");
       }
     } else if (playerSelection === "paper") {
-// Note: Result of condition to be added here
+      if (computerSelection === "rock") {
+        console.log("YOU WIN! Paper covers rock.")
+      } else (computerSelection === "scissors") {
+        console.log("Uh oh! You Lose. Scissors cut paper. :(")
+      } else {
+        console.log("Debugging Needed 43")
+      }
     } else if (playerSelection === "scissors") {
-// Note: Result of condition to be added here
+      if (computerSelection === "paper") {
+        console.log("YOU WIN! Scissors cut paper.")
+      } else if (computerSelection == "rock") {
+        console.log("Uh oh. You Lose. Rock crushes scissors.")
+      } else {
+        console.log("Debugging Needed 51")
+      }
     } else {
       console.log("I didn't seem to catch that Make sure you are giving a rock/paper/scissors value (not case sensitive).");
       return rockPaperScissors;
