@@ -20,12 +20,12 @@ function getComputerChoice () {
 // A variable to count how many games have been played and how many have been won. 
 let gamesPlayed = 0;
 let gamesWon = 0;
-tie = false;
+let tie = false;
 
 function rockPaperScissors (playerSelection, computerSelection) {
   // Conditional to assing value to the choice
   if (playerSelection === computerSelection) {
-    let tie = true;
+    prompt("It's a tie?! Let's try that again. What's your next move? ")
   } else {
     if (playerSelection === "rock") {
       if (computerSelection === "scissors") {
@@ -70,12 +70,6 @@ let playerChoice = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scisso
 
 getComputerChoice();
 rockPaperScissors(playerChoice, getComputerChoice);
-
-while (tie) {
-  console.log("It resulted in a tie! Let's go again.")
-  getComputerChoice();
-  rockPaperScissors(playerChoice, getComputerChoice) 
-}
 
 // Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.
 
