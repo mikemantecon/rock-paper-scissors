@@ -2,7 +2,7 @@
 
 function getComputerChoice () {
   // Generates a random number between 1 and 3
-  let numberChosen = Math.floor(Math.random() * 3);
+  let numberChosen = Math.floor(Math.random() * 3) + 1;
   // assigns a value to the number
   if (numberChosen = 3) {
     getComputerChoice = "rock";
