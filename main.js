@@ -83,7 +83,7 @@ function game () {
   }
 }
 
-let userInput = prompt("Did you enjoy this game? ").tolowercase;
+let userInput = prompt("Did you enjoy this game? ").toLowerCase;
 
 if (userinput === yes) {
   console.log("We're glad you enjoyed. Play again soon!");
