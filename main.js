@@ -20,8 +20,7 @@ let gamesPlayed = 0;
 let gamesWon = 0;
 
 function rockPaperScissors (playerSelection, computerSelection) {
-  // computing the input into a lowercase value
-  playerSelection = playerSelection.toLowerCase();
+  playerSelection = playerSelection.toString().toLowerCase();
   // Conditional to assing value to the choice
   if (playerSelection === computerSelection) {
     console.log("It's a tie?! Let's try that again.")
@@ -65,9 +64,11 @@ function rockPaperScissors (playerSelection, computerSelection) {
 
 function game() {
   for (let i = 0; i < 5; i++) {
-    let playerChoice = prompt("Will it be rock, paper, or scissors ").toLowerCase
+    let playerSelection = prompt("Will it be rock, paper, or scissors?")
+    playerSelection = playerSelection.toString().toLowerCase();
     let computerChoice = getComputerChoice();
-    let completed = rockPaperScissors(playerChoice, computerChoice);
+    computerChoice = computerChoice.toLowerCase();
+    let completed = rockPaperScissors(playerSelection, computerChoice);
     if (!completed) {
       i--; // repeat this round just in case a tie happens.
     }
