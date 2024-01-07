@@ -22,10 +22,6 @@ let gamesPlayed = 0;
 let gamesWon = 0;
 
 function rockPaperScissors (playerSelection, computerSelection) {
-  // Ask for the player selection, without being case sensitive
-  playerSelection = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase;
-  // Retrieve Computer selection
-  computerSelection = getComputerChoice; 
   // Conditional to assing value to the choice
   if (playerSelection === computerSelection) {
     console.log("It's a tie!! Let's go for the tiebreaker...")
@@ -67,6 +63,14 @@ function rockPaperScissors (playerSelection, computerSelection) {
 
 //Add to the number of games played past this point
 gamesPlayed += 1;
+
+// The space where the functions are run
+
+// Ask for the player selection, without being case sensitive
+let playerChoice = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase;
+
+getComputerChoice();
+rockPaperScissors(playerChoice, getComputerChoice);
 
 // Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.
 
