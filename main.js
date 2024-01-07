@@ -11,6 +11,7 @@ function getComputerChoice () {
   } else {
     return "scissors";
   }
+}
 
 // Initialize a function that plays a single round of Rock Paper Scissors. The parameters should be playerSelection and computerSelection, and at the end it should return a string that declares the winner of the round like so: "You Lose! Paper beats Rock. The playerSelection parameter should be case-insensitive and a tie should cause a replay. 
 
@@ -19,9 +20,12 @@ let gamesPlayed = 0;
 let gamesWon = 0;
 
 function rockPaperScissors (playerSelection, computerSelection) {
+  // computing the input into a lowercase value
+  playerSelection = playerSelection.toLowerCase();
   // Conditional to assing value to the choice
   if (playerSelection === computerSelection) {
-    prompt("It's a tie?! Let's try that again. What's your next move? ")
+    console.log("It's a tie?! Let's try that again.")
+    return false; // Indicate a tie has occured
   } else {
     if (playerSelection === "rock") {
       if (computerSelection === "scissors") {
@@ -54,37 +58,25 @@ function rockPaperScissors (playerSelection, computerSelection) {
       console.log("I didn't seem to catch that Make sure you are giving a rock/paper/scissors value (not case sensitive).");
     }
   }
+  //Add to the number of games played past this point
+  gamesPlayed += 1;
+  return true; // Indicate that a game has been completed
 }
 
-//Add to the number of games played past this point
-gamesPlayed += 1;
-
-// The space where the functions are run
-
-// Ask for the player selection, without being case sensitive
-let playerChoice = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase();
-
-//Retrieve the computer's choice
-let computerChoice = getComputerChoice();
-
-rockPaperScissors(playerChoice, computerChoice);
-
-// Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.
-
-function game () {
-  if (gamesPlayed < 5) {
-    rockPaperScissors;
-    gamesPlayed += 1;
-  }
-  else {
-    if (gamesWon >= 3) {
-      console.log("Congratulations! You Won");
-    } else {
-      console.log("Better Luck Next Time. You Lost");
+function game() {
+  for (let i = 0; i < 5; i++) {
+    let playerChoice = prompt("Will it be rock, paper, or scissors ").toLowerCase
+    let computerChoice = getComputerChoice();
+    let completed = rockPaperScissors(playerChoice, computerChoice);
+    if (!completed) {
+      i--; // repeat this round just in case a tie happens.
     }
   }
+  if (gamesWon >= 3) {
+    console.log("Congratulations! You Won");
+  } else {
+    console.log("Better Luck Next Time. You Lost.")
+  }
 }
 
-let userInput = prompt("Did you enjoy this game? ").toLowerCase();
-
-console.log("Come back soon!");
+game();
