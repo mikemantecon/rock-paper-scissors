@@ -26,7 +26,6 @@ function rockPaperScissors (playerSelection, computerSelection) {
   // Conditional to assing value to the choice
   if (playerSelection === computerSelection) {
     let tie = true;
-    return rockPaperScissors;
   } else {
     if (playerSelection === "rock") {
       if (computerSelection === "scissors") {
@@ -57,7 +56,6 @@ function rockPaperScissors (playerSelection, computerSelection) {
       }
     } else {
       console.log("I didn't seem to catch that Make sure you are giving a rock/paper/scissors value (not case sensitive).");
-      return rockPaperScissors;
     }
   }
 }
