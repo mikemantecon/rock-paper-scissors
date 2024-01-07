@@ -67,7 +67,7 @@ gamesPlayed += 1;
 // The space where the functions are run
 
 // Ask for the player selection, without being case sensitive
-let playerChoice = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase;
+let playerChoice = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase();
 
 getComputerChoice();
 rockPaperScissors(playerChoice, getComputerChoice);
@@ -88,6 +88,6 @@ function game () {
   }
 }
 
-let userInput = prompt("Did you enjoy this game? ").toLowerCase;
+let userInput = prompt("Did you enjoy this game? ").toLowerCase();
 
 console.log("Come back soon!");
