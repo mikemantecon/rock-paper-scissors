@@ -20,7 +20,6 @@ function getComputerChoice () {
 // A variable to count how many games have been played and how many have been won. 
 let gamesPlayed = 0;
 let gamesWon = 0;
-let tie = false;
 
 function rockPaperScissors (playerSelection, computerSelection) {
   // Conditional to assing value to the choice
@@ -68,8 +67,10 @@ gamesPlayed += 1;
 // Ask for the player selection, without being case sensitive
 let playerChoice = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase();
 
-getComputerChoice();
-rockPaperScissors(playerChoice, getComputerChoice);
+//Retrieve the computer's choice
+let computerChoice = getComputerChoice();
+
+rockPaperScissors(playerChoice, computerChoice);
 
 // Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.
 
