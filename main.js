@@ -16,11 +16,15 @@ function getComputerChoice () {
 
 // Initialize a function that plays a single round of Rock Paper Scissors. The parameters should be playerSelection and computerSelection, and at the end it should return a string that declares the winner of the round like so: "You Lose! Paper beats Rock. The playerSelection parameter should be case-insensitive and a tie should cause a replay. 
 
+// A variable to count how many games have been played and how many have been won. 
+let gamesPlayed = 0;
+let gamesWon = 0;
+
 function rockPaperScissors (playerSelection, computerSelection) {
   // Ask for the player selection, without being case sensitive
-  let playerSelection = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase;
+  playerSelection = prompt("It's Your Turn Now! Will it be Rock, Paper, or Scissors? ").toLowerCase;
   // Retrieve Computer selection
-  let computerSelection = getComputerChoice; 
+  computerSelection = getComputerChoice; 
   // Conditional to assing value to the choice
   if (playerSelection === computerSelection) {
     console.log("It's a tie!! Let's go for the tiebreaker...")
@@ -29,6 +33,7 @@ function rockPaperScissors (playerSelection, computerSelection) {
     if (playerSelection === "rock") {
       if (computerSelection === "scissors") {
         console.log("YOU WIN! Rock crushes scissors.");
+        gamesWon += 1;
       } else if (computerSelection === "paper") {
         console.log("Uh oh. You Lose. Paper covers rock. :(");
       } else {
@@ -37,6 +42,7 @@ function rockPaperScissors (playerSelection, computerSelection) {
     } else if (playerSelection === "paper") {
       if (computerSelection === "rock") {
         console.log("YOU WIN! Paper covers rock.")
+        gamesWon += 1;
       } else if (computerSelection === "scissors") {
         console.log("Uh oh! You Lose. Scissors cut paper. :(")
       } else {
@@ -45,6 +51,7 @@ function rockPaperScissors (playerSelection, computerSelection) {
     } else if (playerSelection === "scissors") {
       if (computerSelection === "paper") {
         console.log("YOU WIN! Scissors cut paper.")
+        gamesWon += 1;
       } else if (computerSelection == "rock") {
         console.log("Uh oh. You Lose. Rock crushes scissors.")
       } else {
@@ -57,4 +64,31 @@ function rockPaperScissors (playerSelection, computerSelection) {
   }
 }
 
-// Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user. 
+//Add to the number of games played past this point
+gamesPlayed += 1;
+
+// Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.
+
+function game () {
+  if (gamesPlayed < 5) {
+    rockPaperScissors;
+    gamesPlayed += 1;
+  }
+  else {
+    if (gamesWon >= 3) {
+      console.log("Congratulations! You Won")
+    } else {
+      console.log("Better Luck Next Time. You Lost")
+    }
+  }
+}
+
+let userInput = prompt("Did you enjoy this game? ").tolowercase;
+
+if (userinput === yes) {
+  console.log("We're glad you enjoyed. Play again soon!");
+} else if (userinput === no) {
+ console.log("Please message me on my GitHub and let me know how I can improve the game.");
+} else {
+  console.log("Come back soon!");
+}
