@@ -5,13 +5,13 @@ function getComputerChoice () {
   let numberChosen = Math.floor(Math.random() * 3);
   // assigns a value to the number
   if (numberChosen = 3) {
-    getComputerChoice = "rock"
+    getComputerChoice = "rock";
   } else if (numberChosen = 2) {
-    getComputerChoice = "paper"
+    getComputerChoice = "paper";
   } else if (numberChosen = 1) {
-    getComputerChoice = "scissors"
+    getComputerChoice = "scissors";
   } else {
-    console.log("Debugging Needed 14")
+    console.log("Debugging Needed 14");
   }
 }
 
@@ -38,21 +38,21 @@ function rockPaperScissors (playerSelection, computerSelection) {
       }
     } else if (playerSelection === "paper") {
       if (computerSelection === "rock") {
-        console.log("YOU WIN! Paper covers rock.")
+        console.log("YOU WIN! Paper covers rock.");
         gamesWon += 1;
       } else if (computerSelection === "scissors") {
-        console.log("Uh oh! You Lose. Scissors cut paper. :(")
+        console.log("Uh oh! You Lose. Scissors cut paper. :(");
       } else {
-        console.log("Debugging Needed 43")
+        console.log("Debugging Needed 43");
       }
     } else if (playerSelection === "scissors") {
       if (computerSelection === "paper") {
-        console.log("YOU WIN! Scissors cut paper.")
+        console.log("YOU WIN! Scissors cut paper.");
         gamesWon += 1;
       } else if (computerSelection == "rock") {
-        console.log("Uh oh. You Lose. Rock crushes scissors.")
+        console.log("Uh oh. You Lose. Rock crushes scissors.");
       } else {
-        console.log("Debugging Needed 51")
+        console.log("Debugging Needed 51");
       }
     } else {
       console.log("I didn't seem to catch that Make sure you are giving a rock/paper/scissors value (not case sensitive).");
@@ -81,9 +81,9 @@ function game () {
   }
   else {
     if (gamesWon >= 3) {
-      console.log("Congratulations! You Won")
+      console.log("Congratulations! You Won");
     } else {
-      console.log("Better Luck Next Time. You Lost")
+      console.log("Better Luck Next Time. You Lost");
     }
   }
 }
