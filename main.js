@@ -12,6 +12,7 @@ function getComputerChoice () {
     getComputerChoice = "scissors"
   } else {
     console.log("Debugging Needed 14")
+  }
 }
 
 // Initialize a function that plays a single round of Rock Paper Scissors. The parameters should be playerSelection and computerSelection, and at the end it should return a string that declares the winner of the round like so: "You Lose! Paper beats Rock. The playerSelection parameter should be case-insensitive and a tie should cause a replay. 
