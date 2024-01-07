@@ -37,7 +37,7 @@ function rockPaperScissors (playerSelection, computerSelection) {
     } else if (playerSelection === "paper") {
       if (computerSelection === "rock") {
         console.log("YOU WIN! Paper covers rock.")
-      } else (computerSelection === "scissors") {
+      } else if (computerSelection === "scissors") {
         console.log("Uh oh! You Lose. Scissors cut paper. :(")
       } else {
         console.log("Debugging Needed 43")
