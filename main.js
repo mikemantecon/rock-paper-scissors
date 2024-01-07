@@ -4,16 +4,13 @@ function getComputerChoice () {
   // Generates a random number between 1 and 3
   let numberChosen = Math.floor(Math.random() * 3) + 1;
   // assigns a value to the number
-  if (numberChosen = 3) {
-    getComputerChoice = "rock";
-  } else if (numberChosen = 2) {
-    getComputerChoice = "paper";
-  } else if (numberChosen = 1) {
-    getComputerChoice = "scissors";
+  if (numberChosen === 3) {
+    return "rock";
+  } else if (numberChosen === 2) {
+    return "paper";
   } else {
-    console.log("Debugging Needed 14");
+    return "scissors";
   }
-}
 
 // Initialize a function that plays a single round of Rock Paper Scissors. The parameters should be playerSelection and computerSelection, and at the end it should return a string that declares the winner of the round like so: "You Lose! Paper beats Rock. The playerSelection parameter should be case-insensitive and a tie should cause a replay. 
 
